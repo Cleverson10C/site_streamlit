@@ -15,32 +15,32 @@ st.set_page_config(
 
 # Dados para gráficos
 def create_sample_data():
-    # Dados de projetos por categoria
+    # Dados de projetos por categoria (ajustados para 1 ano)
     projects_data = {
         'Categoria': ['Web Scraping', 'RPA', 'APIs', 'Relatórios', 'Análise de Dados'],
-        'Quantidade': [15, 12, 8, 20, 10],
-        'Tempo Economizado (horas/semana)': [120, 80, 40, 150, 60]
+        'Quantidade': [8, 6, 4, 12, 5],
+        'Tempo Economizado (horas/semana)': [60, 40, 20, 80, 30]
     }
     
     # Dados de tecnologias e proficiência
     tech_data = {
         'Tecnologia': ['Python', 'Selenium', 'Pandas', 'Flask', 'PostgreSQL', 'Scrapy', 'Plotly'],
-        'Proficiência (%)': [95, 90, 88, 85, 80, 85, 82]
+        'Proficiência (%)': [85, 80, 75, 70, 65, 70, 72]
     }
     
-    # Dados de projetos ao longo do tempo
-    dates = pd.date_range(start='2023-01-01', end='2024-12-31', freq='M')
+    # Dados de projetos ao longo do tempo (Nov 2024 até Out 2025)
+    dates = pd.date_range(start='2024-11-01', end='2025-10-31', freq='M')
     projects_timeline = {
         'Data': dates,
-        'Projetos Concluídos': np.random.poisson(3, len(dates)),
-        'Clientes Atendidos': np.random.poisson(2, len(dates))
+        'Projetos Concluídos': np.random.poisson(2, len(dates)),
+        'Clientes Atendidos': np.random.poisson(1, len(dates))
     }
     
     # Dados de economia de tempo por setor
     sector_data = {
         'Setor': ['E-commerce', 'Financeiro', 'Saúde', 'Educação', 'Varejo'],
-        'Economia de Tempo (%)': [75, 68, 82, 70, 65],
-        'ROI (%)': [300, 250, 400, 280, 220]
+        'Economia de Tempo (%)': [65, 58, 70, 60, 55],
+        'ROI (%)': [220, 180, 280, 200, 160]
     }
     
     return projects_data, tech_data, projects_timeline, sector_data
@@ -79,29 +79,29 @@ def create_hero_section():
     with col1:
         st.metric(
             label="📊 Projetos Concluídos",
-            value="65+",
-            delta="15 este ano"
+            value="25+",
+            delta="10 este ano"
         )
     
     with col2:
         st.metric(
             label="⏰ Horas Economizadas",
-            value="2,500+",
-            delta="450 horas/mês"
+            value="800+",
+            delta="150 horas/mês"
         )
     
     with col3:
         st.metric(
             label="🏢 Empresas Atendidas",
-            value="25+",
-            delta="8 novas este ano"
+            value="12+",
+            delta="5 novas este ano"
         )
     
     with col4:
         st.metric(
             label="💰 ROI Médio",
-            value="280%",
-            delta="35% vs ano anterior"
+            value="250%",
+            delta="20% vs início do ano"
         )
 
 # Gráfico de projetos por categoria
@@ -231,7 +231,7 @@ def create_about_section():
         st.write("Curitiba, PR - Brasil")
         
         st.markdown("### 💼 Experiência")
-        st.write("1+ anos em automação")
+        st.write("1 ano em automação")
         
         st.markdown("### 🎯 Especialização")
         st.write("Python & Web Scraping")
@@ -255,7 +255,7 @@ def create_about_section():
         - 🐍 Desenvolvimento backend com Flask
         - 🗄️ Bancos de dados (PostgreSQL, SQLite3, MySQL)
         """)
-        
+    
         # Adicionar botões de contato
         st.markdown("### 🔗 Links Rápidos")
         col_btn1, col_btn2 = st.columns(2)
@@ -419,13 +419,13 @@ def main():
         col1, col2, col3 = st.columns(3)
         
         with col1:
-            st.metric("Tempo Médio de Projeto", "2-4 semanas", "Entrega rápida")
+            st.metric("Tempo Médio de Projeto", "1-3 semanas", "Entrega ágil")
         
         with col2:
-            st.metric("Taxa de Satisfação", "98%", "Baseado em feedback")
+            st.metric("Taxa de Satisfação", "95%", "Baseado em feedback")
         
         with col3:
-            st.metric("Economia Média", "65%", "Redução de tempo manual")
+            st.metric("Economia Média", "60%", "Redução de tempo manual")
     
     with tab5:
         create_contact_section()

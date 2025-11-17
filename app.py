@@ -31,8 +31,8 @@ def obter_dados_portfolio():
     
     # Proficiência em tecnologias
     dados_proficiencia_tecnologias = {
-        'Tecnologia': ['Python', 'Selenium', 'Pandas', 'Flask', 'PostgreSQL', 'Scrapy', 'Plotly'],
-        'Proficiência (%)': [85, 80, 75, 70, 65, 70, 72]
+        'Tecnologia': ['Python', 'Selenium', 'Pandas', 'Flask', 'PostgreSQL', 'Scrapy', 'Plotly', "Matplotlib", 'Streamlit'],
+        'Proficiência (%)': [85, 80, 75, 70, 65, 70, 72, 78, 74]
     }
     
     # Evolução temporal dos projetos (Nov 2024 - Out 2025)

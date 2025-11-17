@@ -227,7 +227,7 @@ def renderizar_secao_sobre():
         st.write("1 ano em automação")
         
         st.markdown("### 🎯 Especialização")
-        st.write("Python & Web Scraping")
+        st.write("Python", "Web Scraping", "RPA", "APIs", "Análise de Dados")
     
     with coluna_descricao:
         st.info("""
